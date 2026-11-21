@@ -1,0 +1,86 @@
+Decisiones del proyecto: Sistema de préstamo de equipos
+
+A. Entendimiento del problema y tablas/modelos planeados
+
+El problema consiste en organizar el préstamo de equipos de una
+institución mediante una aplicación móvil. Se busca que los usuarios
+puedan consultar qué equipos están disponibles y enviar solicitudes de
+préstamo, mientras que el personal administrador pueda registrar equipos
+y revisar las solicitudes recibidas.
+
+La aplicación se plantea con dos tipos principales de usuario: usuarios
+solicitantes y administradores. Los solicitantes consultan el catálogo y
+realizan solicitudes; los administradores mantienen el inventario y
+supervisan los préstamos.
+
+Para organizar la información se planearon los siguientes modelos o
+tablas:
+
+-   profiles: almacena la información de cada usuario y su rol dentro
+    del sistema.
+-   equipos: contiene los datos de los equipos, como nombre, descripción
+    y disponibilidad.
+-   prestamos: registra cada solicitud, el usuario que la realiza, el
+    equipo solicitado, las fechas y el estado del préstamo.
+-   historial_prestamos: conserva los cambios importantes de cada
+    préstamo, por ejemplo, aprobación, entrega y devolución.
+
+Las relaciones principales serían: un usuario puede tener varias
+solicitudes; un equipo puede aparecer en diferentes préstamos a lo largo
+del tiempo; y cada préstamo puede tener varios registros de historial.
+Se decidió mantener separadas las tablas de equipos y préstamos para
+evitar repetir la información del inventario en cada solicitud.
+
+B. Partes delegadas a la IA y por qué
+
+Se utilizó la IA como apoyo para acelerar tareas de programación y
+reducir el tiempo dedicado a escribir código repetitivo. En particular,
+se le delegaron estas actividades:
+
+-   Proponer una estructura inicial para las pantallas de catálogo,
+    administración de equipos y consulta de préstamos.
+-   Generar componentes reutilizables para mostrar la información de
+    cada equipo.
+-   Elaborar ejemplos de consultas e inserciones con Supabase para
+    recuperar equipos y registrar solicitudes.
+-   Sugerir una configuración básica de navegación entre pantallas con
+    Expo Router.
+-   Ayudar a interpretar mensajes de TypeScript y proponer correcciones.
+
+Se delegaron estas tareas porque requieren código relativamente
+repetitivo y porque la IA permite obtener una primera versión
+rápidamente. Sin embargo, las decisiones sobre las funciones necesarias,
+los datos que debe guardar el sistema y los permisos de cada rol deben
+revisarse de acuerdo con los requisitos del proyecto. El código generado
+se considera una base que debe probarse y adaptarse, no una solución que
+se pueda aceptar sin revisión.
+
+C. Al menos dos cosas que la IA hizo mal y por qué
+
+1.  Supuso nombres y tipos de columnas sin confirmar el esquema real de
+    la base de datos. En algunos ejemplos utilizó nombres de campos y
+    tipos de datos como si estuvieran definidos de antemano. Esto puede
+    provocar errores en las consultas o guardar información en un
+    formato distinto al esperado. La causa fue generar el código a
+    partir de una estructura común, en lugar de comprobar primero las
+    columnas reales de Supabase.
+
+2.  Propuso operaciones de administración sin considerar todas las
+    reglas de integridad y permisos. Por ejemplo, una eliminación
+    directa de un equipo puede ser rechazada si existen préstamos
+    relacionados, y las operaciones de crear o eliminar no deberían
+    estar disponibles para cualquier usuario. La propuesta inicial no
+    contempló suficientemente las relaciones entre tablas ni la
+    validación del rol en la base de datos.
+
+3.  Presentó algunas partes como listas antes de verificar su
+    integración completa. Un componente o una pantalla puede parecer
+    correcto por separado, pero aun así tener incompatibilidades de
+    tipos, rutas o nombres de propiedades al conectarse con el resto del
+    proyecto. Esto ocurre porque el código generado no conoce
+    automáticamente todos los archivos y configuraciones existentes.
+
+Estas situaciones muestran que la IA es útil para producir borradores y
+acelerar el desarrollo, pero sus respuestas deben contrastarse con la
+estructura real del proyecto, probarse y corregirse antes de considerar
+terminada una funcionalidad.

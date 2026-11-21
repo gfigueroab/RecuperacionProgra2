@@ -1,0 +1,78 @@
+PROMPTS.txt Registro de prompts utilizados como apoyo durante el
+desarrollo
+
+Los siguientes prompts representan solicitudes de ejemplo que se
+pudieron utilizar para consultar a una herramienta de inteligencia
+artificial durante el desarrollo del sistema. Se presentan como una
+recopilación representativa y no como una transcripción literal de cada
+conversación.
+
+1.  Análisis inicial del problema “Actúa como asistente de desarrollo de
+    software. Ayúdame a analizar los requisitos de una aplicación móvil
+    para administrar el préstamo de equipos. Identifica los tipos de
+    usuario, las funciones principales y el flujo general del sistema.”
+
+2.  Diseño de la base de datos “Propón un diseño relacional para un
+    sistema de préstamo de equipos utilizando Supabase. Considera
+    usuarios, perfiles, equipos, solicitudes de préstamo e historial.
+    Explica las relaciones entre las tablas y qué información debería
+    guardar cada una.”
+
+3.  Organización del proyecto “Estoy desarrollando una aplicación con
+    React Native, Expo y TypeScript. Sugiere una estructura de carpetas
+    sencilla para separar pantallas, componentes reutilizables y
+    servicios de conexión con Supabase.”
+
+4.  Conexión con Supabase “Muéstrame un ejemplo de cómo configurar la
+    conexión de una aplicación Expo con Supabase usando variables de
+    entorno. Explica en qué archivo debería colocar la configuración y
+    cómo comprobar que la conexión funciona.”
+
+5.  Catálogo de equipos “Ayúdame a crear una pantalla de React Native
+    que consulte los equipos almacenados en Supabase y los muestre en
+    una lista. Incluye estados de carga, manejo de errores y un
+    componente reutilizable para cada equipo.”
+
+6.  Gestión del inventario “Genera un ejemplo de operaciones CRUD para
+    la tabla de equipos: registrar un equipo, consultar los existentes,
+    actualizar sus datos y eliminar un registro. Utiliza TypeScript y
+    Supabase, e indica qué partes debo adaptar al esquema real de mi
+    base de datos.”
+
+7.  Solicitudes de préstamo “Propón un flujo para que un usuario
+    autenticado pueda solicitar un equipo disponible. Explica qué datos
+    se deben guardar en la tabla de préstamos y cómo representar estados
+    como pendiente, aprobado y devuelto.”
+
+8.  Consulta administrativa “Construye un ejemplo de pantalla para que
+    un administrador consulte las solicitudes de préstamo registradas en
+    Supabase. Muestra información básica del usuario, el equipo, las
+    fechas y el estado de cada solicitud.”
+
+9.  Navegación entre pantallas “Explícame cómo configurar Expo Router
+    para navegar entre la pantalla principal, la administración de
+    equipos y la consulta de préstamos. Incluye un ejemplo sencillo de
+    archivo de layout.”
+
+10. Revisión y depuración “Revisa este mensaje de error de TypeScript y
+    explícame qué lo causa. Propón la corrección mínima y señala qué
+    archivos o tipos podrían estar relacionados, sin cambiar partes del
+    proyecto que ya funcionan.”
+
+11. Seguridad y permisos “Recomienda políticas de Row Level Security
+    para un sistema de préstamo de equipos en Supabase. Los usuarios
+    deben poder consultar y crear sus propias solicitudes, mientras que
+    los administradores deben gestionar el inventario y supervisar los
+    préstamos. Explica por qué los permisos deben validarse también en
+    la base de datos.”
+
+12. Revisión final “Prepara una lista de comprobación para revisar una
+    aplicación móvil de préstamo de equipos antes de presentarla.
+    Incluye autenticación, catálogo, operaciones de inventario,
+    solicitudes, navegación, permisos y manejo de errores.”
+
+Nota: Estos prompts sirven como ejemplos de cómo se utilizó la IA como
+herramienta de consulta y apoyo. Las respuestas generadas deben
+adaptarse a los archivos, nombres de columnas, relaciones y políticas
+que realmente existan en el proyecto. La integración, revisión y
+validación final del sistema corresponden al desarrollador.
